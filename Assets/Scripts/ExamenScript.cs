@@ -15,19 +15,18 @@ public class ExamenScript : MonoBehaviour
         }
         else
         {
-            float monto = gramos / 1000 * 500;
-
             switch (codigoGusto)
             {
                 case "CHO":
-                    Debug.Log("El monto total del Chocolate es de $" + monto);
+                    Debug.Log("El monto total del Chocolate es de $" + gramos / 1000 * 500);
                     break;
 
                 case "DDL":
-                    Debug.Log("El monto total del Dulce de Leche es de $" + monto);
+                    Debug.Log("El monto total del Dulce de Leche es de $" + gramos / 1000 * 500);
                     break;
 
                 case "FRU":
+                    float monto = gramos / 1000 * 500;
                     Debug.Log("El monto total de la Frutilla es de $" + (monto - (monto / 100 * 10)));
                     break;
 
