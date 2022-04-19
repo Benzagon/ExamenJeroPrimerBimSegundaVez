@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ExamenScript : MonoBehaviour
 {
-    public string codGusto;
+    public string codigoGusto;
     public float gramos;
 
     void Start()
@@ -15,19 +15,20 @@ public class ExamenScript : MonoBehaviour
         }
         else
         {
-            switch (codGusto)
+            float monto = gramos / 1000 * 500;
+
+            switch (codigoGusto)
             {
                 case "CHO":
-                    Debug.Log("El monto total es de $"+ gramos / 1000 * 500);
+                    Debug.Log("El monto total del Chocolate es de $" + monto);
                     break;
 
                 case "DDL":
-                    Debug.Log("El monto totat es de $" + gramos / 1000 * 500);
+                    Debug.Log("El monto total del Dulce de Leche es de $" + monto);
                     break;
 
                 case "FRU":
-                    float monto = gramos / 1000 * 500;
-                    Debug.Log("El monto totat es de $" + (monto - (monto / 100 * 10)));
+                    Debug.Log("El monto total de la Frutilla es de $" + (monto - (monto / 100 * 10)));
                     break;
 
                 default:
@@ -36,5 +37,4 @@ public class ExamenScript : MonoBehaviour
             }
         }
     }
-      
 }
